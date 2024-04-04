@@ -1,0 +1,89 @@
+@use "./base" as *;
+@use "./typography" as *;
+
+.image-box-1 {
+  width: 100%;
+  border-radius: 20px;
+  @media only screen and (max-width: 39em) {
+    margin: 0;
+    transform: scale(1.2);
+    border-radius: 0;
+  }
+}
+
+.header {
+  &__description {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    font-family: $font-display;
+    line-height: 1.2;
+    color: $color-Wenge-Brown;
+  }
+  @media only screen and (max-width: 39em) {
+    margin: 0;
+  }
+}
+
+.prep-time {
+  background-color: $color-Rose-White;
+  padding: 2rem;
+  border-radius: 20px;
+  &__description {
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    margin-top: 1.3remrem;
+    color: $color-Wenge-Brown;
+    // list-style: square;
+  }
+}
+
+.ingredients {
+  border-bottom: 1px solid $color-Light-Grey;
+  &__box {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+  &__list {
+    margin: 0.5rem 0;
+  }
+}
+
+.instructions {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  border-bottom: 1px solid $color-Light-Grey;
+
+  &__box {
+    padding: 1.5rem;
+  }
+  &__directions {
+    padding: 0 0 0.5rem 1rem;
+  }
+}
+
+.nutritions {
+  &__description {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+  }
+  &__table {
+    font-size: 1.4rem;
+    width: 100%;
+    border-color: $color-Light-Grey;
+    &:not(:last-child) {
+      border-bottom: 1px solid;
+    }
+  }
+
+  td {
+    padding: 1.5rem;
+  }
+  th {
+    padding-right: 7rem;
+  }
+}
+
+.attribution {
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+}

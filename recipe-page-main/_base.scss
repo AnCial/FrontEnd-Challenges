@@ -1,0 +1,63 @@
+// COLOR VARIABLES
+
+$color-primary: hsl(14, 45%, 36%);
+$color-primary-2: hsl(332, 51%, 32%);
+
+$color-White: hsl(0, 0%, 100%);
+$color-Rose-White: hsl(330, 100%, 98%);
+$color-Eggshell: hsl(30, 54%, 90%);
+$color-Light-Grey: hsl(30, 18%, 87%);
+$color-Wenge-Brown: hsl(30, 10%, 34%);
+$color-Dark-Charcoal: hsl(24, 5%, 18%);
+
+// FONT VARIABLES
+$font-primary: "Young Serif", sans-serif;
+$font-display: "Outfit", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: $color-Wenge-Brown;
+  @media only screen and (max-width: 24.5em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "outfit", sans-serif;
+
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: $color-Eggshell;
+  // @media only screen and (max-width: 50em) {
+
+  // }
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 2rem;
+  width: 60rem;
+  margin: 8rem auto 0 auto;
+  padding: 3rem;
+  background-color: $color-White;
+  border-radius: 20px;
+  @media only screen and (max-width: 43.75em) {
+    margin: 0;
+    border-radius: 0;
+  }
+  @media only screen and (max-width: 39em) {
+    width: 100vw;
+    padding: 0 3rem;
+  }
+}
