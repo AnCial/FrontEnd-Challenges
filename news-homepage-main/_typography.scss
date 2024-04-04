@@ -1,0 +1,49 @@
+@use "./base" as *;
+
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 3rem;
+
+  line-height: 1;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
+}

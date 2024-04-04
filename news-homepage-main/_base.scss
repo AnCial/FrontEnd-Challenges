@@ -1,0 +1,81 @@
+// COLOR VARIABLES
+
+$color-Soft-orange: hsl(35, 77%, 62%);
+$color-Soft-red: hsl(5, 85%, 63%);
+
+$color-White: hsl(0, 0%, 100%);
+$color-Grayish-blue: hsl(233, 8%, 79%);
+$color-Dark-grayish-blue: hsl(236, 13%, 42%);
+$color-Very-dark-blue: hsl(240, 100%, 5%);
+
+// FONT VARIABLES
+$font-primary: "Inter", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+
+  @media only screen and (max-width: 53.5em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  font-weight: 300;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+  // @media only screen and (max-width: 50em) {
+
+  // }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: min-content 30rem 1fr 0.5fr;
+  grid-row-gap: 4rem;
+  grid-column-gap: 2rem;
+  padding: 3rem 10rem;
+
+  max-width: 130rem;
+
+  margin: 7rem auto 0 auto;
+
+  background-color: $color-White;
+  // box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: 62.5em) {
+    margin: 0;
+    padding: 3rem 5rem;
+  }
+  @media only screen and (max-width: 53.5em) {
+    padding: 1.5rem 3rem;
+    margin: 0 auto;
+    max-height: 80vh;
+  }
+  @media only screen and (max-width: 39.375em) {
+    padding: 2rem;
+    grid-template-rows: 0.5fr 1fr repeat(3, 0.5fr);
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 28em) {
+    grid-template-rows: 0.5fr 1fr repeat(10, min-content);
+    padding-bottom: 5rem;
+  }
+}

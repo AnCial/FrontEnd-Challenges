@@ -1,0 +1,428 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 53.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-rows: min-content 30rem 1fr 0.5fr;
+  grid-row-gap: 4rem;
+  grid-column-gap: 2rem;
+  padding: 3rem 10rem;
+  max-width: 130rem;
+  margin: 7rem auto 0 auto;
+  background-color: hsl(0, 0%, 100%);
+}
+@media only screen and (max-width: 62.5em) {
+  .container {
+    margin: 0;
+    padding: 3rem 5rem;
+  }
+}
+@media only screen and (max-width: 53.5em) {
+  .container {
+    padding: 1.5rem 3rem;
+    margin: 0 auto;
+    max-height: 80vh;
+  }
+}
+@media only screen and (max-width: 39.375em) {
+  .container {
+    padding: 2rem;
+    grid-template-rows: 0.5fr 1fr repeat(3, 0.5fr);
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .container {
+    grid-template-rows: 0.5fr 1fr repeat(10, min-content);
+    padding-bottom: 5rem;
+  }
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
+}
+
+.image-box-1 {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.navigation {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(236, 13%, 42%);
+}
+.navigation__links {
+  text-decoration: none;
+  margin-left: auto;
+  font-size: 1.4rem;
+  margin-left: 3.5rem;
+}
+.navigation__links:link, .navigation__links:visited {
+  color: hsl(236, 13%, 42%);
+}
+
+@media only screen and (max-width: 39.375em) {
+  .navigation {
+    position: relative;
+  }
+  .navigation__main {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+    /* 1) Hide it visually */
+    opacity: 0;
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+  .nav-open .navigation__main {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .navigation__links:link, .navigation__links:visited {
+    font-size: 3rem;
+  }
+  .nav-open .icon-mobile-nav[name=close-outline] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name=menu-outline] {
+    display: none;
+  }
+}
+/* MOBILE */
+.btn-for-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name=close-outline] {
+  display: none;
+}
+
+@media only screen and (max-width: 39.375em) {
+  .btn-for-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+}
+.main {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+.main__img {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.main__img--main {
+  max-width: 100%;
+  height: auto;
+  grid-column: 1/3;
+}
+@media only screen and (max-width: 39.375em) {
+  .main__img--main {
+    grid-column: 1/span 3;
+  }
+}
+
+.title {
+  grid-column: 1;
+  grid-row: 3;
+}
+@media only screen and (max-width: 39.375em) {
+  .title {
+    grid-row: 3;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .title {
+    grid-row: 3;
+    grid-column: 1/-1;
+  }
+}
+
+.header {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+@media only screen and (max-width: 39.375em) {
+  .header {
+    grid-row: 3;
+    grid-column: 3;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .header {
+    grid-row: 4;
+    grid-column: 1/-1;
+  }
+}
+.header__text {
+  font-size: 1.6rem;
+}
+.header__btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: hsl(0, 0%, 100%);
+  margin-top: 3rem;
+  text-decoration: none;
+  background-color: hsl(5, 85%, 63%);
+  padding: 2rem 5rem;
+  transition: all 0.3s;
+}
+.header__btn:hover, .header__btn:focus {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.articles {
+  grid-row: 4;
+}
+@media only screen and (max-width: 28em) {
+  .articles {
+    margin-bottom: 3rem;
+  }
+}
+.articles__num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: hsl(233, 8%, 79%);
+}
+.articles__container {
+  display: flex;
+  flex-direction: column;
+}
+.articles__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.articles__title:link, .articles__title:visited {
+  color: rgb(0, 0, 0);
+}
+.articles__title:hover, .articles__title:focus {
+  color: hsl(5, 85%, 63%);
+}
+.articles__text {
+  font-size: 1.4rem;
+}
+.articles__img--box {
+  margin-right: 1.5rem;
+}
+.articles__img {
+  width: 10rem;
+  display: inline-block;
+}
+.articles__box--1 {
+  display: flex;
+}
+@media only screen and (max-width: 28em) {
+  .articles__box--1 {
+    grid-row: 6;
+    grid-column: 1/-1;
+  }
+}
+.articles__box--2 {
+  display: flex;
+}
+@media only screen and (max-width: 28em) {
+  .articles__box--2 {
+    grid-row: 7;
+    grid-column: 1/-1;
+  }
+}
+.articles__box--3 {
+  display: flex;
+}
+@media only screen and (max-width: 28em) {
+  .articles__box--3 {
+    grid-row: 8;
+    grid-column: 1/-1;
+  }
+}
+
+.side {
+  display: grid;
+  padding: 0 2rem;
+  grid-row-gap: 2rem;
+  color: hsl(0, 0%, 100%);
+  grid-column: 3/-1;
+  grid-row: 2/4;
+  background-color: hsl(240, 100%, 5%);
+}
+@media only screen and (max-width: 39.375em) {
+  .side {
+    padding: 2rem;
+    grid-row: 4;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .side {
+    grid-row: 5;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.side__box {
+  display: flex;
+  flex-direction: column;
+}
+.side__box:not(:last-child) {
+  border-bottom: 1px solid hsla(233, 8%, 79%, 0.288);
+}
+@media only screen and (max-width: 39.375em) {
+  .side__box {
+    flex: 1;
+    margin: 0 2rem;
+    border-bottom: 1px solid hsla(233, 8%, 79%, 0.288);
+  }
+}
+@media only screen and (max-width: 28em) {
+  .side__box {
+    border-bottom: none;
+  }
+}
+.side__new {
+  color: hsl(35, 77%, 62%);
+  align-self: flex-end;
+  font-weight: 600;
+}
+@media only screen and (max-width: 39.375em) {
+  .side__new {
+    display: none;
+  }
+}
+@media only screen and (max-width: 28em) {
+  .side__new {
+    display: block;
+    align-self: flex-start;
+  }
+}
+.side__title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: all 0.3s;
+  color: hsl(0, 0%, 100%);
+}
+.side__title:link, .side__title:visited {
+  color: hsl(0, 0%, 100%);
+}
+.side__title:hover, .side__title:focus {
+  color: hsl(35, 77%, 62%);
+}
+.side__text {
+  color: hsl(233, 8%, 79%);
+  font-size: 1.6rem;
+}
+
+.attribution {
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+}
+
+/*
+Home New Popular Trending Categories The Bright Future of Web 3.0? Read more New
+image generation?   02 Top 10 Laptops of 2022 Our best
+picks for various needs and budgets. 03 The Growth of Gaming How the pandemic
+has sparked fresh opportunities.
+*/

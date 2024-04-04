@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="navigation">
+        <div class="navigation__logo">
+          <img src="./assets/images/logo.svg" alt="" />
+        </div>
+        <div class="navigation__main">
+          <a href="#" class="navigation__links">Home</a>
+          <a href="#" class="navigation__links">New</a>
+          <a href="#" class="navigation__links">Popular</a>
+          <a href="#" class="navigation__links">Trending</a>
+          <a href="#" class="navigation__links">Categories</a>
+        </div>
+        <button class="btn-for-mobile-nav">
+          <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+          <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+        </button>
+      </header>
+
+      <img
+        src="./assets/images/image-web-3-desktop.jpg"
+        alt="photo of block things"
+        class="main__img--main"
+      />
+
+      <h1 class="heading-1 title">The Bright Future of Web 3.0?</h1>
+      <div class="header">
+        <p class="header__text">
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <a href="#" class="header__btn">Read more</a>
+      </div>
+      <!-- </div> -->
+      <div class="side">
+        <h2 class="heading-2 side__new">New</h2>
+        <div class="side__box">
+          <a href="#" class="side__title">Hydrogen VS Electric Cars</a>
+
+          <p class="side__text">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+
+        <div class="side__box">
+          <a href="#" class="side__title">The Downsides of AI Artistry</a>
+          <p class="side__text">
+            What are the possible adverse effects of on-demand AI image
+            generation
+          </p>
+        </div>
+
+        <div class="side__box">
+          <a href="#" class="side__title">Is VC Funding Drying Up?</a>
+          <p class="side__text">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </div>
+
+      <div class="articles__box--1">
+        <div class="articles__img--box">
+          <img
+            src="./assets/images/image-retro-pcs.jpg"
+            alt="old potato pc"
+            class="articles__img"
+          />
+        </div>
+        <div class="articles__container">
+          <p class="articles__num">01</p>
+          <a href="#" class="articles__title">Reviving Retro Pcs</a>
+          <p class="articles__text">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+
+      <div class="articles__box--2">
+        <div class="articles__img--box">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt="old potato pc"
+            class="articles__img"
+          />
+        </div>
+        <div class="articles__container">
+          <p class="articles__num">02</p>
+          <a href="#" class="articles__title">Top 10 Laptops of 2022</a>
+          <p class="articles__text">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+
+      <div class="articles__box--3">
+        <div class="articles__img--box">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="old potato pc"
+            class="articles__img"
+          />
+        </div>
+        <div class="articles__container">
+          <p class="articles__num">03</p>
+          <a href="#" class="articles__title">The Growth of Gaming</a>
+          <p class="articles__text">
+            How the pandemic has sparked fresh opportunities
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
