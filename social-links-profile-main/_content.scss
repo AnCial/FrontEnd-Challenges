@@ -1,0 +1,78 @@
+@use "./base" as *;
+@use "./typography" as *;
+
+.user {
+  justify-content: center;
+  align-self: center;
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    // margin-top: 1rem;
+    margin: 0 0 1rem 3.7rem;
+    display: inline-block;
+
+    // justify-self: center;
+    // justify-self: center;
+  }
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  &__location {
+    color: $color-Green;
+    margin: 0.5rem 0 0 3rem;
+    font-size: 0.8rem;
+  }
+}
+
+.description {
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+.btn {
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  background-color: $color-grey;
+  border-radius: 3px;
+  font-weight: 700;
+  // letter-spacing: 0.5px;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  &:active,
+  &:visited {
+    color: $color-white;
+  }
+  &:hover,
+  &:active {
+    cursor: pointer;
+    transform: translate(1px, -2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    color: $color-black;
+    background-color: $color-Green;
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+    text-align: center;
+  }
+  &:active,
+  &:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+}

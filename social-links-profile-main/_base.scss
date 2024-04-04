@@ -1,0 +1,58 @@
+// COLOR VARIABLES
+
+$color-Green: hsl(75, 94%, 57%);
+
+$color-white: hsl(0, 0%, 100%);
+$color-grey: hsl(0, 0%, 20%);
+$color-Dark-Grey: hsl(0, 0%, 12%);
+$color-black: hsl(0, 0%, 7%);
+
+// FONT VARIABLES
+$font-default: 1.4rem;
+$font-primary: "Figtree", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  line-height: 1.6;
+  background-color: $color-black;
+
+  // @media only screen and (max-width: 50em) {
+
+  // }
+}
+
+html {
+  box-sizing: border-box;
+  color: $color-white;
+  // @media only screen and (max-width: 24.5em) {
+  //   font-size: 50%;
+  // }
+}
+
+.container {
+  grid-template-rows: 2fr 0.4fr repeat(5, 0.6fr);
+  // grid-row-gap: 0.4rem;
+  display: grid;
+  grid-row-gap: 1rem;
+  background-color: $color-Dark-Grey;
+  width: 20rem;
+  height: 34rem;
+  margin: 12rem auto 0 auto;
+  padding: 2.5rem;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}

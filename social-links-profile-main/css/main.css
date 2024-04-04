@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  line-height: 1.6;
+  background-color: hsl(0, 0%, 7%);
+}
+
+html {
+  box-sizing: border-box;
+  color: hsl(0, 0%, 100%);
+}
+
+.container {
+  grid-template-rows: 2fr 0.4fr repeat(5, 0.6fr);
+  display: grid;
+  grid-row-gap: 1rem;
+  background-color: hsl(0, 0%, 12%);
+  width: 20rem;
+  height: 34rem;
+  margin: 12rem auto 0 auto;
+  padding: 2.5rem;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.user {
+  justify-content: center;
+  align-self: center;
+}
+.user__photo {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin: 0 0 1rem 3.7rem;
+  display: inline-block;
+}
+.user__name {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.user__location {
+  color: hsl(75, 94%, 57%);
+  margin: 0.5rem 0 0 3rem;
+  font-size: 0.8rem;
+}
+
+.description {
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+.btn {
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 3px;
+  font-weight: 700;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+.btn:active, .btn:visited {
+  color: hsl(0, 0%, 100%);
+}
+.btn:hover, .btn:active {
+  cursor: pointer;
+  transform: translate(1px, -2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  color: hsl(0, 0%, 7%);
+  background-color: hsl(75, 94%, 57%);
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.attribution__link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+.attribution:active, .attribution:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+}
