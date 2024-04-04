@@ -1,0 +1,86 @@
+@use "./base" as *;
+@use "./typography" as *;
+
+.img-box {
+  width: 100%;
+  border-radius: 20px;
+  // @media only screen and (max-width: 39em) {
+  //   margin: 0;
+  //   transform: scale(1.2);
+  //   border-radius: 0;
+  // }
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  width: 25%;
+  border: none;
+  background-color: $color-yellow;
+  border-radius: 3px;
+  font-weight: 700;
+  // letter-spacing: 0.5px;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    cursor: pointer;
+    transform: translate(1px, -2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+.publication {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.title {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  &:active,
+  &:visited {
+    color: rgb(0, 0, 0);
+  }
+  &:hover {
+    cursor: pointer;
+    color: $color-yellow;
+  }
+}
+
+.text {
+  font-size: 1rem;
+  color: $color-grey;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+
+  &-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    transition: all 0.5s;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      transform: scale(1.6);
+    }
+  }
+  &-name {
+    font-size: 1rem;
+    font-weight: 900;
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+      color: $color-yellow;
+    }
+  }
+}
+
+.attribution {
+  margin-top: 2rem;
+}
