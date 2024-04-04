@@ -1,0 +1,35 @@
+// COLOR VARIABLES
+
+$color-White: hsl(0, 0%, 100%);
+$color-Light-gray: hsl(212, 45%, 89%);
+$color-Grayish-blue: hsl(220, 15%, 55%);
+$color-Dark-blue: hsl(218, 44%, 22%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Outfit", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $color-Light-gray;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+}
