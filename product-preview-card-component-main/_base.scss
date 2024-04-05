@@ -1,0 +1,39 @@
+// COLOR VARIABLES
+
+$color-White: hsl(0, 0%, 100%);
+$color-Dark-cyan: hsl(158, 36%, 37%);
+$color-Cream: hsl(30, 38%, 92%);
+$color-Very-dark-blue: hsl(212, 21%, 14%);
+$color-Dark-grayish-blue: hsl(228, 12%, 48%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Fraunces", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-weight: 300;
+
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
