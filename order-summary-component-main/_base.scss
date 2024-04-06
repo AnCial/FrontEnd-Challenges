@@ -1,0 +1,39 @@
+// COLOR VARIABLES
+
+$color-White: hsl(0, 0%, 100%);
+$color-Pale-blue: hsl(225, 100%, 94%);
+$color-Bright-blue: hsl(245, 75%, 52%);
+$color-Very-pale-blue: hsl(225, 100%, 98%);
+$color-Desaturated-blue: hsl(224, 23%, 55%);
+$color-Dark-blue: hsl(223, 47%, 23%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Red Hat Display", sans-serif;
+$font-secondary: "", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
