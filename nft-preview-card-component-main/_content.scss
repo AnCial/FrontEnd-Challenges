@@ -1,0 +1,141 @@
+@use "./base" as *;
+@use "./typography" as *;
+
+.card {
+  font-size: $font-default;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, min-content);
+  color: $color-Soft-blue;
+  grid-row-gap: 2.5rem;
+  max-height: 80rem;
+  max-width: 45rem;
+  padding: 2.5rem;
+  background-color: $color-dark-blue-1;
+  &__box {
+    position: relative;
+    &-opacity {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+
+      &:hover,
+      &:active {
+        cursor: pointer;
+        background-color: hsla(178, 100%, 50%, 0.219);
+        opacity: 1;
+      }
+      &-eye {
+        position: absolute;
+        top: 43%;
+        left: 44.5%;
+        &:hover,
+        &:active {
+          cursor: pointer;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    margin-bottom: -7px;
+    border-radius: 10px;
+    // backface-visibility: hidden;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      background-color: $color-Cyan;
+      opacity: 0.3;
+    }
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:link,
+    &:visited {
+      color: $color-White;
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      color: $color-Cyan;
+      cursor: pointer;
+    }
+  }
+  &__text {
+    font-size: 2.2rem;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-dark-blue-2;
+    padding-bottom: 2rem;
+    &-icon {
+      margin: 0 0.8rem;
+    }
+    &-eth {
+      color: $color-Cyan;
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+
+    &--photo {
+      width: 4rem;
+      border: 1px solid $color-White;
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+    &--name {
+      &-link {
+        text-decoration: none;
+        transition: all 0.3s;
+        &:link,
+        &:visited {
+          color: $color-White;
+          text-decoration: none;
+        }
+        &:hover,
+        &:active {
+          cursor: pointer;
+          color: $color-Cyan;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 5rem;
+  color: $color-White;
+  transition: all 0.3s;
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-White;
+      text-decoration: none;
+    }
+  }
+}
+
+// &-link {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   z-index: 1000;
+// }

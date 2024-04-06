@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Outfit", sans-serif, sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.card {
+  font-size: 1.8rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr repeat(4, min-content);
+  color: hsl(215, 51%, 70%);
+  grid-row-gap: 2.5rem;
+  max-height: 80rem;
+  max-width: 45rem;
+  padding: 2.5rem;
+  background-color: hsl(216, 50%, 16%);
+}
+.card__box {
+  position: relative;
+}
+.card__box-opacity {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.card__box-opacity:hover, .card__box-opacity:active {
+  cursor: pointer;
+  background-color: hsla(178, 100%, 50%, 0.219);
+  opacity: 1;
+}
+.card__box-opacity-eye {
+  position: absolute;
+  top: 43%;
+  left: 44.5%;
+}
+.card__box-opacity-eye:hover, .card__box-opacity-eye:active {
+  cursor: pointer;
+  opacity: 1;
+}
+.card__img {
+  max-width: 100%;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  margin-bottom: -7px;
+  border-radius: 10px;
+}
+.card__img:hover, .card__img:active {
+  cursor: pointer;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.3;
+}
+.card__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.card__title:link, .card__title:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.card__title:hover, .card__title:active {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.card__text {
+  font-size: 2.2rem;
+}
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding-bottom: 2rem;
+}
+.card__price-icon {
+  margin: 0 0.8rem;
+}
+.card__price-eth {
+  color: hsl(178, 100%, 50%);
+}
+.card__author {
+  display: flex;
+  align-items: center;
+}
+.card__author--photo {
+  width: 4rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.card__author--name-link {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.card__author--name-link:link, .card__author--name-link:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.card__author--name-link:hover, .card__author--name-link:active {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.attribution {
+  margin-top: 5rem;
+  color: hsl(0, 0%, 100%);
+  transition: all 0.3s;
+}
+.attribution__link:link, .attribution__link:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
