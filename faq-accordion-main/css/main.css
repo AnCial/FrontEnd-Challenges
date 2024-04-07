@@ -1,0 +1,149 @@
+@charset "UTF-8";
+:root {
+  --primary: #227093;
+  --secondary: #ff5252;
+  --background: #eee;
+  --highlight: hsl(0, 0%, 100%);
+  /* Theme color */
+  --theme: var(--primary);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Work Sans", sans-serif, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(275, 100%, 97%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  color: hsl(292, 16%, 49%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.accordion {
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 3rem 2rem 2rem 2rem;
+  max-width: 40rem;
+  background-color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+.accordion__header {
+  font-size: 3rem;
+  color: hsl(292, 42%, 14%);
+  align-items: center;
+}
+.accordion__header--icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-right: 0.5rem;
+}
+.accordion__tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion__label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  background: white;
+  cursor: pointer;
+  color: hsl(292, 42%, 14%);
+  padding: 1.5rem;
+}
+.accordion__label:hover {
+  color: hsl(293, 83%, 42%);
+}
+.accordion__label::after {
+  content: "❯";
+  transform: rotate(90deg);
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.accordion input:checked + .accordion__label::after {
+  transform: rotate(270deg);
+}
+.accordion__content p {
+  margin: 0;
+  padding: 1rem;
+}
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.accordion input:checked ~ .accordion__content {
+  max-height: 10rem;
+}
+
+.last-child {
+  border: 0;
+}
+
+/* Visual styles */
+/* Arrow animation */
+.accordion__tab input:not(:checked) + .accordion__label:hover::after {
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(0.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-0.25rem);
+  }
+}
+.attribution {
+  margin-top: 5rem;
+}

@@ -1,0 +1,92 @@
+@use "./base" as *;
+@use "./typography" as *;
+
+.accordion {
+  // color: var(--theme);
+
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 3rem 2rem 2rem 2rem;
+  max-width: 40rem;
+  background-color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  &__header {
+    font-size: 3rem;
+    color: hsl(292, 42%, 14%);
+    align-items: center;
+    &--icon {
+      width: 2.3rem;
+      height: 2.3rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__tab {
+    & input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    background: white;
+    cursor: pointer;
+    color: hsl(292, 42%, 14%);
+    padding: 1.5rem;
+    &:hover {
+      color: hsl(293, 83%, 42%);
+    }
+  }
+
+  &__label::after {
+    content: "\276F";
+    transform: rotate(90deg);
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  & input:checked + &__label::after {
+    transform: rotate(270deg);
+  }
+  &__content p {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+  }
+  & input:checked ~ &__content {
+    max-height: 10rem;
+  }
+}
+
+.last-child {
+  border: 0;
+}
+
+/* Visual styles */
+
+/* Arrow animation */
+.accordion__tab input:not(:checked) + .accordion__label:hover::after {
+  animation: bounce 0.5s infinite;
+}
+@keyframes bounce {
+  25% {
+    transform: rotate(90deg) translate(0.25rem);
+  }
+  75% {
+    transform: rotate(90deg) translate(-0.25rem);
+  }
+}
+
+.attribution {
+  margin-top: 5rem;
+}
