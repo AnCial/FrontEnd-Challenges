@@ -1,0 +1,37 @@
+// COLOR VARIABLES
+
+$color-White: hsl(0, 0%, 100%);
+$color-Bright-orange: hsl(31, 77%, 52%);
+$color-Dark-cyan: hsl(184, 100%, 22%);
+$color-Very-dark-cyan: hsl(179, 100%, 13%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Lexend Deca", sans-serif;
+$font-secondary: "Big Shoulders Display", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
