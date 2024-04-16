@@ -1,0 +1,35 @@
+@use "./base" as *;
+
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 3rem;
+  line-height: 1;
+
+  // @media only screen and (max-width: 39em) {
+  //   margin-top: 3rem;
+  // }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 1.9rem;
+}
