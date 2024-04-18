@@ -1,0 +1,38 @@
+// COLOR VARIABLES
+
+$color-Cyan: hsl(179, 62%, 43%);
+$color-BrightYellow: hsl(71, 73%, 54%);
+$color-LightGray: hsl(204, 43%, 93%);
+$color-GrayishBlue: hsl(218, 22%, 67%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Karla", sans-serif;
+$font-secondary: "", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-LightGray;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
