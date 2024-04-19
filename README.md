@@ -8,6 +8,9 @@ I might have just blown my chance at getting hired...
 ...
 
 Anyway, these are all the challenges I did on FrontendMentor... All of which, I did my best to replicate the site or the component that they had.
-Each and every single one of these challenges are coded by myself entirely and had no help whatsoever except for the occassional peek at MDN.
+Each and every single one of these challenges are coded by myself entirely and had no help whatsoever except for the occassional peek at MDN. The
+link to my FrontEndMentor profile can be found here: https://shorturl.at/rsI24
+
+
 
 That's about it, I hope you have a wonderful day and pray good fortune to your endeavors. Also, please hire me~ :D
