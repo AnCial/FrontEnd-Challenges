@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        margin-top: 5rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__img">
+        <img
+          src="/images/drawers.jpg"
+          alt="Picture of drawer"
+          class="container__img-1"
+        />
+      </div>
+      <div class="container__box">
+        <h1 class="container__box--header">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="container__box--text">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+
+        <div class="container__box--author">
+          <img
+            src="/images/avatar-michelle.jpg"
+            alt="picture of woman"
+            class="container__box--author-img"
+          />
+          <div class="container__box--author-box">
+            <p class="container__box--author-name">Michelle Appleton</p>
+            <p class="container__box--author-date">28 Jun 2020</p>
+          </div>
+
+          <div class="container__share">
+            <h2>SHARE</h2>
+            <img src="/images/icon-facebook.svg" alt="" />
+            <img src="/images/icon-twitter.svg" alt="" />
+            <img src="/images/icon-pinterest.svg" alt="" />
+          </div>
+          <button class="container__share-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/AnCial"
+        >Marcial Aguinaldo</a
+      >.
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

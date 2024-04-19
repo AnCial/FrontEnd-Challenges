@@ -1,0 +1,37 @@
+// COLOR VARIABLES
+
+$color-VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$color-DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$color-GrayishBlue: hsl(212, 23%, 69%);
+$color-LightGrayishBlue: hsl(210, 46%, 95%);
+$color-white: hsl(0, 0%, 100%);
+
+// FONT VARIABLES
+$font-default: 1.3rem;
+$font-primary: "Manrope", sans-serif;
+$font-secondary: "", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
