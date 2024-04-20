@@ -5,6 +5,7 @@ const btn = document.querySelector(".container__front--btn");
 const front = document.querySelector(".container__front");
 const back = document.querySelector(".container__back");
 const span = document.getElementById("rating");
+const container = document.querySelector(".container");
 
 for (let i = 0; i < ratings.length; i++) {
   ratings[i].addEventListener("click", function () {
@@ -20,6 +21,7 @@ for (let i = 0; i < ratings.length; i++) {
     btn.addEventListener("click", function () {
       front.style.display = "none";
       back.style.display = "flex";
+      container.classList.add("animated");
       span.innerHTML = rating;
     });
   });
