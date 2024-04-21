@@ -1,0 +1,33 @@
+// COLOR VARIABLES
+
+$color-White: hsl(0, 0%, 100%);
+$color-DarkCyan: hsl(185, 75%, 39%);
+$color-VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$color-DarkGrayishBlue: hsl(227, 10%, 46%);
+$color-DarkGray: hsl(0, 0%, 59%);
+
+// FONT VARIABLES
+$font-default: 1.6rem;
+$font-primary: "Kumbh Sans", sans-serif;
+$font-secondary: "", sans-serif;
+
+// RESPONSIVE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
