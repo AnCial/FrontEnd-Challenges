@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__box1">
+        <img src="/images/logo.svg" alt="" class="container__box1--logo" />
+        <div class="container__box1--header">
+          <p class="container__box1--header title1">We're</p>
+          <p class="container__header title2">coming</p>
+          <p class="container__header title2">soon</p>
+        </div>
+        <div class="container__box1--text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </div>
+
+        <div class="container__group">
+          <input
+            type="email"
+            class="container__group--form"
+            placeholder="Email address"
+            id="email"
+            required
+          />
+          <label for="email" class="container__group--label"
+            ><img
+              src="/images/icon-error.svg"
+              alt=""
+              class="container__group--error"
+            />
+            <label
+              for="input-field"
+              class="container__group--error-msg"
+            ></label>
+
+            <button class="container__group--button button">
+              <img
+                src="/images/icon-arrow.svg"
+                class="container__group--button--icon"
+                alt=""
+              />
+            </button>
+          </label>
+        </div>
+      </div>
+      <div class="container__box2">
+        &nbsp;
+        <picture class="container__box2--img">
+          <source srcset="/images/hero-desktop.jpg" media="(min-width: 37em)" />
+          <img src="/images/hero-mobile.jpg" class="container__img-1 alt="" />
+        </picture>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

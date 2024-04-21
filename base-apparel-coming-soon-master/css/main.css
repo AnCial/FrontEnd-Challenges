@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.container {
+  padding: 12vh 18vw;
+  display: flex;
+  flex-basis: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+@media only screen and (max-width: 87.5em) {
+  .container {
+    padding: 12vh 14vw;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    padding: 12vh 10vw;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 12vh 5vw;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    padding: 6vh;
+  }
+}
+@media only screen and (max-width: 37em) {
+  .container {
+    padding: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 6vh;
+    text-align: center;
+  }
+}
+.container__box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 50%;
+}
+@media only screen and (max-width: 56.25em) {
+  .container__box1 {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 37em) {
+  .container__box1 {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.container__box1--logo {
+  width: 16rem;
+}
+@media only screen and (max-width: 37em) {
+  .container__box1--logo {
+    margin-bottom: 65rem;
+  }
+}
+.container__box1--header {
+  font-size: 7rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 15px;
+}
+.container__box1--text {
+  font-size: 1.8rem;
+  max-width: 40rem;
+  color: hsl(0, 36%, 70%);
+  max-width: 100%;
+}
+@media only screen and (max-width: 37em) {
+  .container__box1--text {
+    margin: 3rem 0;
+  }
+}
+.container__box2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 35%;
+  height: 110%;
+  transform: scale(1.25);
+}
+@media only screen and (max-width: 37em) {
+  .container__box2 {
+    top: 43%;
+    left: 4%;
+    transform: scale(1.6);
+    width: 20%;
+  }
+}
+.container__box2--img-1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.container__group {
+  position: relative;
+}
+.container__group--form {
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  margin-bottom: 8rem;
+  width: 93%;
+  transition: all 0.3s;
+  overflow: hidden;
+  grid-row: 4;
+  grid-column: 1;
+}
+.container__group--form:focus {
+  outline: none;
+  border: 1px solid hsl(0, 93%, 68%);
+}
+.container__group--button {
+  position: absolute;
+  padding: 0.7rem 4rem;
+  top: 0;
+  right: -6%;
+  transform: translate(-50%);
+  border-radius: 50px;
+  font-size: 3rem;
+  z-index: 999;
+  font-weight: 100;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+@media only screen and (max-width: 56.25em) {
+  .container__group--button {
+    padding: 0.8rem 5rem;
+    right: -15%;
+  }
+}
+.container__group--button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(135deg, hsla(0, 80%, 86%, 0.61), hsla(0, 74%, 74%, 0.548));
+}
+.container__group--error {
+  position: absolute;
+  top: 42%;
+  left: 3%;
+  display: none;
+}
+.container__group--error-msg {
+  display: none;
+  position: absolute;
+  color: hsl(0, 93%, 68%);
+  top: 45%;
+  left: 10%;
+  font-size: 1.3rem;
+}
+
+.title1 {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.title2 {
+  color: hsl(0, 6%, 24%);
+}
+
+.error {
+  display: none;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  right: 25%;
+}
