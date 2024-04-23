@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  padding: 8rem;
+  height: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-gap: 3rem;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    &--icon {
+      grid-column: 1 / span5;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(103deg)
+        brightness(105%) contrast(105%);
+      @include respond(phone) {
+        width: 26rem;
+      }
+    }
+
+    &--contact {
+      grid-row: 2;
+      font-size: 1.6rem;
+      color: $color-white;
+    }
+
+    &--contact img {
+      margin-right: 1.5rem;
+    }
+
+    &--links {
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      &-link {
+        text-decoration: none;
+        margin-bottom: 1rem;
+        &:active,
+        &:visited {
+          color: $color-white;
+        }
+      }
+    }
+    &--social {
+      @include respond(phone) {
+        margin: 0 auto;
+      }
+      &-icon {
+        margin-right: 1.5rem;
+        fill: white;
+        height: 4rem;
+        width: 4rem;
+
+        &:hover {
+          cursor: pointer;
+          transition: all 0.3s;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
