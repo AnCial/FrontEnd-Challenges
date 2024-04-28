@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cta {
+  position: absolute;
+  max-width: 70%;
+
+  padding: 6rem 6rem 2rem 6rem;
+
+  background-color: $color-testiBG;
+  border-radius: 10px;
+  top: 40%;
+  right: -20%;
+
+  transform: translate(-50%);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include respond(tab-land) {
+  }
+  @include respond(phone) {
+  }
+  &__container {
+    @include respond(phone) {
+      text-align: center;
+    }
+    &--text {
+      color: $color-white;
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.row {
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+  justify-content: center;
+  align-items: start;
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

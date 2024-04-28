@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  padding-top: 20rem;
+  height: 100%;
+  width: 80%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-gap: 3rem;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    &--icon {
+      grid-column: 1 / span5;
+      @include respond(phone) {
+        width: 26rem;
+      }
+    }
+    &--text {
+      font-size: 1.5rem;
+    }
+    &--location {
+      display: flex;
+      &-icon {
+        height: 2rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &--contact {
+      grid-row: 2;
+      grid-column: 2;
+      font-size: 1.3rem;
+      color: $color-white;
+    }
+
+    &--contact img {
+      margin-right: 1.5rem;
+    }
+
+    &--links {
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      &-link {
+        text-decoration: none;
+        margin-bottom: 1rem;
+        color: $color-white;
+        &:active,
+        &:visited {
+          color: $color-white;
+        }
+      }
+    }
+    &--social {
+      @include respond(phone) {
+        margin: 0 auto;
+      }
+      &-icon {
+        margin-right: 1.5rem;
+        fill: white;
+        height: 4rem;
+        width: 4rem;
+
+        &:hover {
+          cursor: pointer;
+          transition: all 0.3s;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

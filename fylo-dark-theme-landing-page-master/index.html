@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>
+      Frontend Mentor | Fylo landing page with dark theme and features grid
+    </title>
+
+    <link rel="stylesheet" href="./sass/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <header class="header">
+    <div class="header__container">
+      <div class="navigation">
+        <img
+          src="/images/logo.svg"
+          class="navigation__logo"
+          alt="logo of thing"
+        />
+        <div class="navigation__toggle">
+          <i class="bx bx-moon" onclick="changeIcon(this)"></i>
+        </div>
+        <div class="navigation__main">
+          <a href="#" class="navigation__link">Features</a>
+          <a href="#" class="navigation__link">Team</a>
+          <a href="#" class="navigation__link">Sign In</a>
+        </div>
+      </div>
+
+      <button class="hamburger">
+        <span class="hamburger__box">
+          <span class="hamburger__inner"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+  <body>
+    <section class="section-hero">
+      <div class="hero row">
+        <img src="/images/illustration-intro.png" class="hero--img" alt="" />
+
+        <div class="hero__container">
+          <h2 class="heading-primary heading-primary--main">
+            All your files in one secure location, accessible anywhere.
+          </h2>
+          <p class="hero__container--text">
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+
+          <button class="btn hero--btn btn--animated">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about">
+      <div class="about__grid">
+        <div class="about__boxes">
+          <img
+            src="/images/icon-access-anywhere.svg"
+            class="about__container1-img"
+            alt=""
+          />
+          <h3 class="heading-tertiary about__boxes--heading">
+            Access your files, anywhere
+          </h3>
+          <p class="about__boxes--text">
+            The ability to use a smartphone, tablet, or computer to access your
+            account means your files follow you everywhere.
+          </p>
+        </div>
+
+        <div class="about__boxes">
+          <img
+            src="/images/icon-security.svg"
+            class="about__container1-img"
+            alt=""
+          />
+          <h3 class="heading-tertiary about__boxes--heading">
+            Security you can trust
+          </h3>
+          <p class="about__boxes--text">
+            2-factor authentication and user-controlled encryption are just a
+            couple of the security features we allow to help secure your files.
+          </p>
+        </div>
+
+        <div class="about__boxes">
+          <img
+            src="/images/icon-collaboration.svg"
+            class="about__container1-img"
+            alt=""
+          />
+          <h3 class="heading-tertiary about__boxes--heading">
+            Real-time collaboration
+          </h3>
+          <p class="about__boxes--text">
+            Securely share files and folders with friends, family and colleagues
+            for live collaboration. No email attachments required.
+          </p>
+        </div>
+
+        <div class="about__boxes">
+          <img
+            src="/images/icon-any-file.svg"
+            class="about__container1-img"
+            alt=""
+          />
+          <h3 class="heading-tertiary about__boxes--heading">
+            Store any type of file
+          </h3>
+          <p class="about__boxes--text">
+            Whether you're sharing holidays photos or work documents, Fylo has
+            you covered allowing for all file types to be securely stored and
+            shared.
+          </p>
+        </div>
+      </div>
+
+      <div class="about">
+        <div class="about__container">
+          <img
+            src="/images/illustration-stay-productive.png"
+            class="about__container--img"
+            alt=""
+          />
+          <div class="about__container-text-box">
+            <h2
+              class="heading-primary heading-primary--sub u-margin-bottom-medium"
+            >
+              Stay productive, wherever you are
+            </h2>
+            <p class="about__container--text">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+
+            <p class="about__container--text">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+
+            <a href="#" class="about__container--link"
+              >See how Fylo works
+              <img
+                src="/images/icon-arrow.svg"
+                class="about__container--link-icon"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="about__container--testimonial">
+          <img
+            src="/images/bg-quotes.png"
+            class="about__container--testimonial-icon"
+            alt="quotes"
+          />
+          <div class="about__container--testimonial-boxes">
+            <p class="about__container--testimonial--text">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+
+            <figcaption class="about__container--testimonial-author">
+              <img
+                src="/images/profile-1.jpg"
+                class="about__container--testimonial-author--img"
+                alt=""
+              />
+              <div class="about__container--testimonial-author-box">
+                <p class="about__container--testimonial-author-box-name">
+                  Kyle Burton
+                </p>
+                <p class="about__container--testimonial-author-box-title">
+                  Founder & CEO, Huddle
+                </p>
+              </div>
+            </figcaption>
+          </div>
+
+          <div class="about__container--testimonial-boxes">
+            <p class="about__container--testimonial--text">
+              The main point of this challenge is to provide the website a Dark
+              Theme to the original website. Alsom I hear this Marcial person is
+              very handsome.
+            </p>
+
+            <figcaption class="about__container--testimonial-author">
+              <img
+                src="/images/profile-2.jpg"
+                class="about__container--testimonial-author--img"
+                alt=""
+              />
+              <div class="about__container--testimonial-author-box">
+                <p class="about__container--testimonial-author-box-name">
+                  Random Person
+                </p>
+                <p class="about__container--testimonial-author-box-title">
+                  Founder & CEO, Huddle
+                </p>
+              </div>
+            </figcaption>
+          </div>
+
+          <div class="about__container--testimonial-boxes">
+            <p class="about__container--testimonial--text">
+              This has been coded by Marcial Aguinaldo for the frontend mentor,
+              Fylo Dark theme challenge.
+            </p>
+
+            <figcaption class="about__container--testimonial-author">
+              <img
+                src="/images/profile-3.jpg"
+                class="about__container--testimonial-author--img"
+                alt=""
+              />
+              <div class="about__container--testimonial-author-box">
+                <p class="about__container--testimonial-author-box-name">
+                  Marcial Aguinaldo
+                </p>
+                <p class="about__container--testimonial-author-box-title">
+                  Handsome Man
+                </p>
+              </div>
+            </figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="cta">
+        <div class="cta__container">
+          <h2 class="heading-secondary">Get early access today</h2>
+          <p class="cta__container--text">
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+          <div class="form form__group form__group--bottom">
+            <input
+              type="email"
+              class="form__group form__group--bottom form-bottom"
+              placeholder="Email Address"
+              id="email"
+              required
+            />
+            <label for="input-field" class="form-bottom"></label>
+            <label for="email" class="form__label"></label>
+            <button class="btn btn--animated btn--bottom">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-footer">
+      <div class="footer">
+        <div class="footer__container">
+          <img src="images/logo.svg" class="footer__container--icon" alt="" />
+
+          <div class="footer__container--location">
+            <img
+              src="/images/icon-location.svg"
+              class="footer__container--location-icon"
+              alt=""
+            />
+            <p class="footer__container--text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+              nobis perferendis pariatur deleniti libero maiores minus eligendi!
+            </p>
+          </div>
+
+          <div class="footer__container--contact">
+            <p class="footer__container--contact-num">
+              <img src="/images/icon-phone.svg" alt="" /> Phone: +1-543-123-4567
+            </p>
+            <p class="footer__container--contact-tel">
+              <img src="/images/icon-email.svg" alt="" />example@fylo.com
+            </p>
+          </div>
+
+          <div class="footer__container--links">
+            <a href="#" class="footer__container--links-link">About Us</a>
+            <a href="#" class="footer__container--links-link">Jobs</a>
+            <a href="#" class="footer__container--links-link">Press</a>
+            <a href="#" class="footer__container--links-link">Blog</a>
+          </div>
+
+          <div class="footer__container--links">
+            <a href="#" class="footer__container--links-link">Contact Us</a>
+            <a href="#" class="footer__container--links-link">Terms</a>
+            <a href="#" class="footer__container--links-link">Privacy</a>
+          </div>
+
+          <div class="footer__container--social">
+            <ion-icon
+              name="logo-facebook"
+              class="footer__container--social-icon"
+            ></ion-icon>
+            <ion-icon
+              name="logo-twitter"
+              class="footer__container--social-icon"
+            ></ion-icon>
+            <ion-icon
+              name="logo-instagram"
+              class="footer__container--social-icon"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>

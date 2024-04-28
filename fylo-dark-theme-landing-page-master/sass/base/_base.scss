@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  color: $color-white;
+  font-family: "Raleway";
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  // the alphabetical order being used in the css file should also be considered
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  background-color: $color-primary;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  @include respond(phone) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

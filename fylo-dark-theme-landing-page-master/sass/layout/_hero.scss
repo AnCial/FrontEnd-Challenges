@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  width: 30%;
+
+  position: relative;
+  margin-top: 10rem;
+  @include respond(tab-port) {
+    width: 60%;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem 0;
+    &--text {
+      font-size: 2.4rem;
+      margin: 3rem 0;
+      line-height: 1.4;
+      @include respond(phone) {
+        text-align: center;
+        font-size: 2.2rem;
+      }
+    }
+  }
+  &--img {
+    justify-self: center;
+
+    @include respond(tab-port) {
+      width: 40rem;
+    }
+  }
+
+  &--btn {
+    width: 40%;
+    align-self: center;
+  }
+}
