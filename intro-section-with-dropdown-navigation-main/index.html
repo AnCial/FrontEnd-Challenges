@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section-hero active">
+      <header class="header navigation">
+        <img
+          src="/images/logo.svg"
+          alt="logo of snap"
+          class="navigation__logo"
+        />
+
+        <ul class="navigation__main">
+          <li class="navigation__links mobile-features">
+            <span class="navigation__links--dropdown"
+              >Features<img
+                class="navigation__links-dropdown-icon"
+                id="desktopnav-features-icon"
+                src="/images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                onclick="changeIcon2()"
+            /></span>
+            <div class="navigation__links--dropdown-features">
+              <ul class="features-dropdown">
+                <li>
+                  <img src="/images/icon-todo.svg" alt="todo" /><span
+                    >Todo List</span
+                  >
+                </li>
+                <li>
+                  <img src="/images/icon-calendar.svg" alt="calendar" /><span
+                    >Calendar</span
+                  >
+                </li>
+                <li>
+                  <img src="/images/icon-reminders.svg" alt="reminders" /><span
+                    >Reminders</span
+                  >
+                </li>
+                <li>
+                  <img src="/images/icon-planning.svg" alt="planning" /><span
+                    >Planning</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__links mobile-company">
+            <span class="navigation__links--dropdown"
+              >Company
+              <img
+                class="navigation__links-dropdown-icon"
+                id="desktopnav-company-icon"
+                src="/images/icon-arrow-down.svg"
+                alt="icon arrow down"
+                onclick="changeIcon3()"
+            /></span>
+            <div class="navigation__links--dropdown-company">
+              <ul class="company-dropdown">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+          </li>
+          <li class="navigation__links">Careers</li>
+          <li class="navigation__links">About</li>
+          <li class="navigation__links toggle-icon u-margin-auto">
+            <i class="bx bx-moon"></i>
+          </li>
+          <!-- onclick="changeIcon(this)" -->
+          <li class="navigation__links">Login</li>
+          <li class="navigation__links u-margin-zero">
+            <button class="btn btn--white">Register</button>
+          </li>
+        </ul>
+        <!-- <a href="#" class="navigation__links ">Login</a> -->
+
+        <button class="hamburger">
+          <span class="hamburger__box">
+            <span class="hamburger__inner"></span>
+          </span>
+        </button>
+      </header>
+
+      <div class="container">
+        <div class="container__box1">
+          <h1 class="container__box1-header">Make <span>remote work</span></h1>
+          <p class="container__box1-text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn btn--hero btn--animated">Learn more</button>
+          <div class="container__box1-links">
+            <img
+              src="/images/client-databiz.svg"
+              class="container__box1-links--icons"
+              alt=""
+            />
+            <img
+              src="/images/client-audiophile.svg"
+              class="container__box1-links--icons"
+              alt=""
+            />
+            <img
+              src="/images/client-meet.svg"
+              class="container__box1-links--icons"
+              alt=""
+            />
+            <img
+              src="/images/client-maker.svg"
+              class="container__box1-links--icons"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="container__box2">
+          <picture class="container__box2--img">
+            <source
+              srcset="/images/image-hero-desktop.png"
+              media="(min-width: 56.25em)"
+              class="container__box2--img"
+            />
+            <img
+              src="/images/image-hero-mobile.png"
+              class="container__box2--img"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
+
+<!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
