@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(213, 19%, 18%);
+  color: white;
+  width: 34rem;
+  height: 34rem;
+  border: 1px solid #000;
+  border-radius: 25px;
+}
+.container__box {
+  margin: 1.8rem;
+}
+.container__box span {
+  padding: 1rem 1.2rem;
+  background-color: hsl(215, 18%, 25%);
+  border-radius: 50%;
+  font-size: 1.6rem;
+}
+.container__box span img {
+  width: 1.5rem;
+  align-self: center;
+  justify-self: center;
+}
+.container__box h3 {
+  font-size: 2.3rem;
+}
+.container__box p {
+  font-size: 1.5rem;
+  color: hsl(217, 12%, 63%);
+}
+.container__box ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+.container__box ul li {
+  font-size: 1.3rem;
+  font-weight: 700;
+  list-style: none;
+  background-color: hsl(215, 18%, 25%);
+  padding: 1rem 1.6rem;
+  border-radius: 50%;
+  margin: 1rem 0;
+  color: hsl(217, 12%, 63%);
+}
+.container__box ul li:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.container__box ul .selected {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+}
+.container__box button {
+  width: 100%;
+  padding: 1.3rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.container__box button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+.container__box--back {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container__box--back img {
+  width: 50%;
+  align-self: center;
+}
+.container__box--back span {
+  border-radius: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+  margin: 2rem 0;
+  color: hsla(25, 97%, 53%, 0.638);
+}
+.container__box--back h3 {
+  margin: 0.5rem;
+}
+.container__box--back p {
+  margin: 0.5rem 0;
+}
+
+.flip {
+  display: none;
+}
